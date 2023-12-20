@@ -7,16 +7,21 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 	<link rel="stylesheet" href="../style.css" />
-	<title>eBazar</title>
+	<script src="../jquery.js"></script>
+	<title>Login</title>
 </head>
 
 <body>
+	<video autoplay loop muted plays-inline class="back-vedio">
+		<source src="../media/caver.mp4" type="video/mp4">
+	</video>
 	<!-- header start -->
-	<header>
+	<!-- update -->
+	<header style="background: transparent;">
 		<div class="container">
 			<nav>
 				<div class="logo">
-					<span class="title"> <a href="/index.html">eBazar</a></span>
+					<span id="Target" class="title"> <a href="/index.html">Target</a></span>
 					<span class="icon"><i class="material-icons">shopping_cart</i></span>
 				</div>
 				<div class="nav-link">
@@ -34,14 +39,20 @@
 	<main class="container auth-main">
 		<div class="card">
 			<div class="card-tile">
-				<h3>Login Here</h3>
+				<h3 style="font-size: 24px; color: white" >Login Here</h3>
 			</div>
 			<div class="card-content">
 				<form action="javascript:login()" class="form-container">
-					<input class="form-input" type="email" name="loginEmail" id="loginEmail" placeholder="example@abc.com"
+					<input class="form-input" type="email" name="loginEmail" id="loginEmail" placeholder="Email"
 						required />
 					<input class="form-input" type="password" name="loginPassword" id="loginPassword" placeholder="Password"
 						required />
+
+					<div class="rem">
+					<input type="checkbox" name="showPw" id="showPw" />
+					<label for="showPw" id="showPwLabel">Show Password</label>
+				</div>
+					
 					<button type="submit" class="btn">Login</button>
 				</form>
 
@@ -51,7 +62,7 @@
 	<!-- main end -->
 
 	<!-- footer start -->
-	<footer>
+	<footer style="background: transparent;">
 		<div class="container">
 			<div class="footer-container">
 				<div class="foot-col-social">
@@ -66,21 +77,21 @@
 					</ul>
 				</div>
 				<div class="foot-col-text">
-					<p>Call us toll free on: +91 99-9999-9999</p>
+					<p>Call us toll free on: +02-01100001111</p>
 				</div>
 				<div class="foot-col-newsletter">
 					<div class="newsletter-text">
 						<p>For offers and newsletter:</p>
 					</div>
 					<div class="newsletter-input">
-						<input type="email" class="foot-input" placeholder="example@abc.com" />
+						<input type="email" class="foot-input" placeholder="Email" />
 					</div>
 				</div>
 			</div>
 			<div class="line"></div>
 			<div class="footer-text">
 				<p>
-					Design & developed by Rishi Raj | Copyright 2019 |
+					Design & developed by Mahmoud Badry | Copyright 2023
 					<a href="">Privacy Policy</a> | <a href="">Return Policy</a>
 				</p>
 			</div>
@@ -88,6 +99,17 @@
 	</footer>
 	<!-- footer end -->
 	<script src="/auth/auth.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#showPw").click(function () {
+				if ($("#showPw").is(":checked")) {
+					$("#loginPassword").attr("type", "text");
+				} else {
+					$("#loginPassword").attr("type", "password");
+				}
+			});
+		});
+	</script>
 </body>
 
 </html>

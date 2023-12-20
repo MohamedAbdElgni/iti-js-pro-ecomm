@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link rel="stylesheet" href="../style.css" />
+    <script src="../app.js"></script>
+    
+    
+	<title>Admin Orders</title>
+    
+</head>
+<body>
+    <header>
+		<div class="container">
+			<nav>
+				<div class="logo">
+					<span id="Target" class="title"> <a href="../index.html">Target</a> Admin </span>
+                    <span class="icon"><i class="material-icons">shopping_cart</i></span>
+                    <em style="color: white;" id="ordersCount"></em>
+					
+				</div>
+				<div class="nav-link">
+					<ul>
+                        <li class="nav-item"  id="adProd"><a onclick="">Products</a></li>
+                        <li class="nav-item"><a onclick=" adminOrders()" id="orders">Orders</a></li>
+						<li class="nav-item"><a onclick="logout()" id="logoutButton">Logout</a></li>
+                        
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+    <main class="container">
+        <button id="showD">show details</button>
+        <table>
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Order ID</th>
+                <th>User ID</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Action</th>
+                <th>Cancel</th>
+
+            </tr>
+            </thead>
+            <tbody id="ordersTableBody"></tbody>
+        </table>
+        </main>
+        <script src="admin.js"></script>
+        <script src="../uorders/uorders.js"></script>
+        <script src="../jquery.js"></script>
+        <script>
+
+            $(document).ready(function(){
+                $('tr:contains("cancelled")').css("text-decoration", "line-through");
+                $('tr:contains("cancelled")').css("color", "black");
+                $('tr:contains("cancelled")').css("background-color", "#f3e483");
+                $('tr:contains("confirmed")').css("background-color", "#78e3aa");
+                $('tr').css("font-weight", "bold");
+                $('tr').css("font-size", "1rem");
+                $('#adProd').show();
+                $('#adProd').click(function () {
+                    window.location = '/admin/adminproducts.html'
+                })
+                
+            })
+        </script>
+    </body>
+</html>

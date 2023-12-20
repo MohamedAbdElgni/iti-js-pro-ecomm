@@ -6,8 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="style.css" />
-	<title>eBazar</title>
+	<script src="jquery.js" defer></script>
+	<title>Home</title>
 </head>
 
 <body onload="getUser()">
@@ -16,14 +18,17 @@
 		<div class="container">
 			<nav>
 				<div class="logo">
-					<span class="title"> <a href="/index.html">eBazar</a></span>
-					<span class="icon"><i class="material-icons">shopping_cart</i></span>
+					<span id="Target" class="title"> <a href="/index.html">Target</a></span>
+					<span class="icon"><i class="material-icons" style="color: #fff;">shopping_cart</i></span>
+					
 				</div>
 				<div class="nav-link">
 					<ul>
 						<li class="nav-item"><a href="/auth/login.html" id="loginButton">Login</a></li>
-						<li class="nav-item" id="basket-container"><i class="material-icons">shopping_basket</i><span id="basket"></span></li>
+						<li class="nav-item" id="basket-container"><i style="color: #fff;" class="material-icons">shopping_basket</i><span id="basket" style="color: #fff;"></span></li>
 						<li class="nav-item"><a onclick="getCart()" id="cartName"></a></li>
+						<li class="nav-item"  id="adProd"><a onclick="">Products</a></li>
+						<li class="nav-item"><a onclick=" getUorders()" id="orders">Orders</a></li>
 						<li class="nav-item"><a onclick="logout()" id="logoutButton">Logout</a></li>
 					</ul>
 				</div>
@@ -34,14 +39,26 @@
 
 	<!-- main start -->
 	<main class="container">
-		<!-- <div class="welcome-text"><h3 id="welcome-text"></h3></div> -->
+		
 		<div class="category-bar">
 			<div class="nav-link center">
-					<ul>
-						<li id="cat-all" class="nav-item active"><a onclick="getAll()">All</a></li>
-						<li id="cat-mob" class="nav-item" ><a onclick="getMobiles()">Mobiles</a></li>
-						<li id="cat-lap" class="nav-item"><a onclick="getLaptops()">Laptops</a></li>
+					<ul id="catsbar">
+						
 					</ul>
+			</div>
+		</div>
+		<!-- filter for prices -->
+		<div class="filter">
+			<div class="filter-container">
+				<div class="filter-text">
+					<p>Filter by price:</p>
+				</div>
+				<div class="filter-input">
+					<input type="number" class="filter-input" placeholder="From" id="from" />
+					<input type="number" class="filter-input" placeholder="To" id="to" />
+					<button class="filter-button">Filter</button>
+					<button class="filter-reset">Reset</button>
+				</div>
 			</div>
 		</div>
 		<div class="flex-container">
@@ -51,43 +68,90 @@
 	<!-- main end -->
 
 	<!-- footer start -->
-	<footer>
+
+	<footer id="#footd">
 		<div class="container">
 			<div class="footer-container">
 				<div class="foot-col-social">
 					<div class="social-text">
 						<p>Follow us on:</p>
 					</div>
-					<ul class="social">
-						<li><a href="#" class="foot-icons facebook"></a></li>
-						<li><a href="" class="foot-icons twitter"></a></li>
-						<li><a href="" class="foot-icons instagram"></a></li>
-						<li><a href="" class="foot-icons tumblr"></a></li>
-					</ul>
+					<div class="social">
+						<a href="https://www.facebook.com/profile.php?id=100038113880156" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+						<a href="https://twitter.com/pepsi?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+						<a href="https://www.instagram.com/mahmoud_badr100/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+					</div>
 				</div>
 				<div class="foot-col-text">
-					<p>Call us toll free on: +91 99-9999-9999</p>
+					<p>Call us toll free on: +02-01100001111</p>
 				</div>
 				<div class="foot-col-newsletter">
 					<div class="newsletter-text">
 						<p>For offers and newsletter:</p>
 					</div>
 					<div class="newsletter-input">
-						<input type="email" class="foot-input" placeholder="example@abc.com" />
+						<input type="email" class="foot-input" placeholder="Email" />
 					</div>
 				</div>
 			</div>
 			<div class="line"></div>
 			<div class="footer-text">
 				<p>
-					Design & developed by Rishi Raj | Copyright 2019 |
+					Design & developed by Mahmoud Badry | Copyright 2023 
 					<a href="">Privacy Policy</a> | <a href="">Return Policy</a>
 				</p>
 			</div>
 		</div>
 	</footer>
+
+
 	<!-- footer end -->
 	<script src="./app.js"></script>
+	<script src="jquery.js" ></script>
+
+	<script>
+		$(document).ready(function(){
+			$("#adProd").hide();
+			$("#orders").hide();
+			
+			
+			$('#adProd').click(function () {
+				window.location = '/admin/adminproducts.html'
+			})
+
+			
+
+		
+		$('.nav-link ul li').click(function () {
+			$(this).addClass('active').siblings().removeClass('active');
+		})
+		
+		function filter(){
+			var from = $("#from").val();
+			var to = $("#to").val();
+			$(".product-list-container").children().each(function(){
+				var price = $(this).find(".price").text();
+				if(price < from || price > to){
+					$(this).hide();
+				}else{
+					$(this).show();
+				}
+			})
+		}
+
+		$(".filter-button").click(function(){
+			filter();
+		})
+
+		$(".filter-reset").click(function(){
+			$(".product-list-container").children().each(function(){
+				$(this).show();
+			})
+		})
+		
+
+	})
+	</script>
 </body>
 
 </html>

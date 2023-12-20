@@ -20,8 +20,9 @@ function register() {
 	let role = document.getElementById('role').value;
 
 	let newUser = new User(id, name, email, password, role);
+	
 	let userCart = "cart_" + newUser.id;
-
+	
 	if(localStorage.getItem('Users')) {
 		let users = []
 		users = JSON.parse(localStorage.getItem('Users') || "[]");
@@ -61,9 +62,24 @@ function login() {
 		sessionStorage.setItem('currUserId', user.id);
 		sessionStorage.setItem('currUserEmail', user.email);
 		sessionStorage.setItem('isAuthenticated', true);
+		sessionStorage.setItem('currUserRole', user.role);
 		window.location = '/'
+		//check if user has cart
+		
+		if(!localStorage.getItem('cart_' + user.id)) {
+			localStorage.setItem('cart_' + user.id, JSON.stringify([]));
+		}
+
+		if(user.role == 'admin') {
+			window.location = '/admin/admin.html'
+		} else {
+			window.location = '/'
+		}
+
 	} else {
 		window.alert("Invalid email or incorrect password. Try Again!");
 	}
+
+
 }
 

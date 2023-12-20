@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../jquery.js"></script>
+    <script src="admin.js"></script>
+    <title>Add Products</title>
+    <style>
+        .addprodform{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10%;
+        }
+        input{
+            margin: 10px;
+            padding: 10px;
+            width: 50%;
+        }
+        #addProduct{
+            width: 20%;
+            padding: 10px;
+            margin: 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #addProduct:hover{
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+		<div class="container">
+			<nav>
+				<div class="logo">
+					<span id="Target" class="title"> <a href="/index.html">Target All Products</a></span>
+					<span class="icon"><i class="material-icons" style="color: #fff;"></i></span>
+					
+				</div>
+				<div class="nav-link">
+					<ul>
+						<li class="nav-item"><a href="/auth/login.html" id="loginButton">Login</a></li>
+						<li class="nav-item"><a onclick="getCart()" id="cartName"></a></li>
+						<li class="nav-item"  id="adProd"><a onclick="">Products</a></li>
+						<li class="nav-item"><a onclick=" getUorders()" id="orders">Orders</a></li>
+						<li class="nav-item"><a onclick="logout()" id="logoutButton">Logout</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+    <main class="container">
+        <form class="addprodform" action="" method="post">
+            <label for="pid">Product ID</label>
+            <input type="text" name="pid" id="pid" required placeholder="Product ID">
+            <label for="category">Category</label>
+            <input type="text" name="category" id="category" required placeholder="Category">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required placeholder="Name">
+            <label for="price">Price</label>
+            <input type="text" name="price" id="price" required placeholder="Price">
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description" required placeholder="Description">
+            <label for="quantity">Quantity</label>
+            <input type="number" name="quantity" id="quantity" required placeholder="Quantity">
+            <label for="image">Image URL</label>
+            <input type="text" name="image" id="image" required placeholder="Image URL">
+            <label for="image">Image URL</label>
+            <input type="submit" value="Add Product" required id="addProduct">
+            
+
+        </form>
+        
+    </main>
+    
+    
+    
+    
+    <script src="../app.js"></script>
+
+    <script src="../jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#adProd").show();
+            $("#orders").show();
+            $("#logoutButton").show();
+            $("#loginButton").hide();
+            $("#basket-container").hide();
+            $("#cartName").hide();
+            $('#adProd').click(function () {
+                window.location = '/admin/adminproducts.html'
+            })
+            $('#orders').click(function () {
+                window.location = '/admin/admin.html'
+            })
+            $('#logoutButton').click(function () {
+                window.location = '/auth/login.html'
+            })
+        
+            
+            let products = JSON.parse(localStorage.getItem('products'))
+
+            
+
+            $('#addProduct').click(function (e) {
+                e.preventDefault()
+                let pid = $('#pid').val()
+                let category = $('#category').val()
+                let name = $('#name').val()
+                let price = $('#price').val()
+                let description = $('#description').val()
+                let quantity = $('#quantity').val()
+                let image = $('#image').val()
+                let product = {
+                    id: pid,
+                    category: category,
+                    name: name,
+                    price: price,
+                    description: description,
+                    qnt: quantity,
+                    imageURL: image
+                }
+                products.push(product)
+                localStorage.setItem('products', JSON.stringify(products))
+                window.location = '/admin/adminproducts.html'
+            })
+        
+            
+            
+        })
+        
+        
+        
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,82 +1,329 @@
 [
 	{
 		"id": "mob_1",
-		"name": "Google Pixel 3 XL",
-		"price": "65999",
-		"description": "With a powerful battery, massive internal storage, impressive cameras and innovative features, there’s more to pixel 3 xl than meets the eye. Its 16 cm (6. 3) OLED bezel-less display with notch and its 82 percent body-to-display ratio, offers you an impressive viewing experience. The cameras of this smartphone are equipped with various features, such as the portrait mode to help take insta-worthy portraits and group selfies. Boasting a 3430 mAh battery, the pixel 3 xl won’t call it a day even after you do. Get weather info, search for fast commute routes or you want traffic updates - all you need is a simple squeeze or just your voice, to activate the google assistant.",
-		"imageURL": "https://images-na.ssl-images-amazon.com/images/I/51GSapCrtGL._SL1000_.jpg",
-		"category": "mobile"
+		"name": "Samsung Galaxy S21",
+		"price": "79999",
+		"description": "Introducing the Samsung Galaxy S21 with a stunning 6.2-inch Dynamic AMOLED display, powerful Exynos processor, and a versatile triple camera setup. Capture breathtaking moments with ease.",
+		"imageURL": "https://images.samsung.com/is/image/samsung/p6pim/pk/galaxy-s21/gallery/pk-galaxy-s21-5g-g996-366073-sm-g996bzsgmea-362622820",
+		"category": "mobile",
+		"qnt":"20"
 	},
 	{
 		"id": "mob_2",
-		"name": "Google Pixel 2 XL",
-		"price": "44000",
-		"description": "With a wide screen display of 6 inches and a 4 GB RAM memory, the Google Pixel is a popular choice in the range of smartphones that Google has to offer. The Google Pixel 2 XL features a powerful Snapdragon 835 processor to get more out of your smartphone in terms of processing power. Click pictures, create memories through videos and toggle between applications with this feature rich phone.",
-		"imageURL": "https://images-na.ssl-images-amazon.com/images/I/61VIZlolf4L._SL1000_.jpg",
-		"category": "mobile"
+		"name": "iPhone 13 Pro",
+		"price": "109999",
+		"description": "Experience the excellence of the iPhone 13 Pro featuring a Super Retina XDR display, A15 Bionic chip, and advanced camera system. Elevate your smartphone experience to new heights.",
+		"imageURL": "https://pngimg.com/d/iphone_13_PNG24.png",
+		"category": "mobile",
+		"qnt":"20"
 	},
 	{
 		"id": "mob_3",
-		"name": "Apple iPhone XR",
-		"price": "59000",
-		"description": "With a 6.1-inch Liquid Retina display IP67 water and dust resistant 12MP camera with OIS and 7MP TrueDepth front camera—Portrait mode, Portrait Lighting, Depth Control, and Smart HDR. Face ID for secure authentication. A12 Bionic with next-generation Neural Engine. Wireless charging—works with Qi chargers iOS 12 with Memoji, Screen Time, Siri Shortcuts, and Group FaceTime",
-		"imageURL": "https://images-na.ssl-images-amazon.com/images/I/519KIlHA2wL._SL1024_.jpg",
-		"category": "mobile"
-	},
-	{
-		"id": "mob_4",
-		"name": "OnePlus 7 Pro",
-		"price": "57999",
-		"description": "Go beyond speed with 'OnePlus' newest flagship with an unique full display, an industry leading triple camera and premium glass design.",
-		"imageURL": "https://images-na.ssl-images-amazon.com/images/I/51FwsSj8knL._SL1000_.jpg",
-		"category": "mobile"
-	},
-	{
-		"id": "mob_5",
-		"name": "OnePlus 7",
-		"price": "32999",
-		"description": "Go beyond speed with 'OnePlus' newest flagship with an unique full display, an industry leading triple camera and premium glass design.",
-		"imageURL": "https://images-na.ssl-images-amazon.com/images/I/512xYZ5OjGL._SL1000_.jpg",
-		"category": "mobile"
-	},
-	{
-		"id": "mob_6",
-		"name": "Samsung Galaxy S10 Plus",
-		"price": "114900",
-		"description": "Triple rear camera setup: 16MP with f2.2 aperture ultra wide + 12MP with f1.5 and f2.4 aperture wide + 12MP f2.4 tele| Dual front camera setup - 10MP f1.9 Main + 8MP f2.2 live focus 16.35 centimeters (6.4-inch) Dynamic AMOLED multi-touch capacitive touchscreen with 3040 x 1440 pixels resolution, 522 ppi pixel density Memory, Storage and SIM: 12GB RAM | 1024GB internal memory expandable up to 512GB | Dual SIM (nano+nano) dual stand by (4G+4G) Android Pie v9.0 operating system with 2.7GHz + 2.3GHz + 1.9GHz Exynos 9820 octa core processor 4100mAH lithium-ion battery 1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase Box also includes: Earphones, Travel Adapter, USB Cable, Ejection Pin, User Manual.",
-		"imageURL": "https://images-na.ssl-images-amazon.com/images/I/61LFYmFlLuL._SL1500_.jpg",
-		"category": "mobile"
-	},
-	{
-		"id": "mob_7",
-		"name": "Samsung Galaxy Note 9",
-		"price": "77900",
-		"description": "Camera: 12 MP + Dual Rear Camera (F1.5/F2.4) + 12 MP (F2.4) | 8 MP (F1.7) front camera. Display: 16.2 centimeters (6.4-inch) QHD+ Super AMOLED Infinity capacitive touchscreen display with 2960x1440 pixels and 18.5:9 aspect ratio. Memory, Storage & SIM: 8GB RAM | 512GB storage expandable up to 512GB | Dual SIM with dual standby (4G+4G). Operating System and Processor: Android v8.0 Oreo operating system with Exynos Octa core processor. Battery: 4000 mAH lithium ion battery.",
-		"imageURL": "https://images-na.ssl-images-amazon.com/images/I/61-3SaQysBL._SL1500_.jpg",
-		"category": "mobile"
+		"name": "OnePlus 9",
+		"price": "54999",
+		"description": "Unleash the power of the OnePlus 9 with its 120Hz Fluid AMOLED display, Snapdragon 870 processor, and Hasselblad triple camera setup. Performance and style in one sleek package.",
+		"imageURL": "https://oasis.opstatics.com/content/dam/oasis/page/2021/9-series/spec-image/9/Wintermist_2080a_euna.png",
+		"category": "mobile",
+		"qnt":"20"
 	},
 	{
 		"id": "lap_1",
-		"name": "Dell Alienware 17 R5 VR Ready 17.3\" LCD Gaming Notebook",
-		"price": "150381",
-		"description": "Screen Size 17.3 inches Max Screen Resolution 1920 x 1080 Processor3.9 GHz Intel Core i7 RAM8 GB DDR4 Hard Drive1000 GB Hybrid Drive Graphics CoprocessorNVIDIA GeForce GTX 1060 Chipset BrandNVIDIA Card DescriptionIntegrated, Dedicated Graphics Card Ram Size6 GB Number of USB 2.0 Ports1 Number of USB 3.0 Ports3 Brand NameAlienware Item model numberAW17R5-7405SLV-PUS Hardware PlatformPC Operating SystemWindows 10 Home Item Weight9.74 pounds Product Dimensions13.1 x 16.7 x 1.2 inches Item Dimensions L x W x H13.07 x 16.69 x 1.18 inches ColorEpic Silver Processor BrandIntel Processor Count6 Computer Memory TypeDDR SDRAM Flash Memory Size8.0 Hard Drive InterfaceSerial ATA Hard Drive Rotational Speed5400 RPM Optical Drive TypeNone Batteries1 Lithium ion batteries required. (included)",
-		"imageURL": "https://images-na.ssl-images-amazon.com/images/I/61dWWYvyUFL._SL1500_.jpg",
-		"category": "laptop"
+		"name": "HP Spectre x360",
+		"price": "129999",
+		"description": "Experience the versatility of the HP Spectre x360, a premium 2-in-1 laptop with a 13.3-inch 4K OLED display, 11th Gen Intel Core processor, and exceptional build quality. Transform your computing experience.",
+		"imageURL": "https://www.pngkey.com/png/full/351-3516897_hp-spectre-x360-stand-mode-hp-spectre-x360.png",
+		"category": "laptop",
+		"qnt":"20"
 	},
 	{
 		"id": "lap_2",
-		"name": "MSI Gaming MSI GT83 8RG-007IN",
-		"price": "419990",
-		"description": " 2.60GHz Intel Core i7-8850H 8th Gen processor. 32GB DDR4 RAM. 1TB Serial ATA hard drive. 18.4-inch screen, NVidia GeForce GTX 1080 SLI 8GB Graphics. Windows 10 operating system. 5.5kg laptop",
-		"imageURL": "https://images-na.ssl-images-amazon.com/images/I/81MzezSQgdL._SL1500_.jpg",
-		"category": "laptop"
+		"name": "Dell XPS 15",
+		"price": "159999",
+		"description": "Elevate your productivity with the Dell XPS 15 featuring a stunning 15.6-inch InfinityEdge display, powerful Intel Core i7 processor, and NVIDIA GeForce GTX 1650 Ti graphics. Precision craftsmanship meets performance excellence.",
+		"imageURL": "https://static0.xdaimages.com/wordpress/wp-content/uploads/2023/03/dell-xps-15-2023.png",
+		"category": "laptop",
+		"qnt":"20"
 	},
 	{
 		"id": "lap_3",
-		"name": "Asus ROG G703GI-E5148T",
-		"price": "499990",
-		"description": "ROG G703 is a beast of a gaming laptop that has the power to take on today’s gaming desktops, thanks to its factory-overclocked 8th Generation Intel Core i9 processor and overclockable NVIDIA GeForce GTX 1080 graphics. G703 is the key that unlocks supreme levels of gaming, so you can play AAA games on Ultra graphics settings without compromises. Continually pushing the envelope, ROG has torn up the gaming laptop blueprint, becoming the first to integrate an ultra-responsive IPS-level 144Hz display with a 3ms response time into its laptops. G703 features HyperDrive Extreme storage, which uses exclusive technology to combine three NVMe PCI Express (PCIe) SSDs in RAID 0 configuration for read speeds of up to 8700MB/s, so games load up in a blink of an eye.",
-		"imageURL": "https://images-na.ssl-images-amazon.com/images/I/71lbxXG9NSL._SL1500_.jpg",
-		"category": "laptop"
-	}
-]
+		"name": "Lenovo Legion 5",
+		"price": "84999",
+		"description": "Dominate the gaming arena with the Lenovo Legion 5, a gaming laptop equipped with a 15.6-inch 144Hz display, AMD Ryzen 7 processor, and NVIDIA GeForce GTX 1660 Ti graphics. Unleash your gaming potential.",
+		"imageURL":"https://p1-ofp.static.pub/fes/cms/2023/05/03/zgqfu1jgyouzy8maegbyvk0zzhhl5n289275.png",
+		"category": "laptop",
+		"qnt":"20"
+	},
+	{
+		"id": "mob_4",
+		"name": "Sony Xperia 5 III",
+		"price": "89999",
+		"description": "Discover the Sony Xperia 5 III with a 6.1-inch HDR OLED display, powerful Snapdragon 888 processor, and a versatile triple camera system with ZEISS optics. Experience cinematic photography and performance in one compact device.",
+		"imageURL": "https://static-www.o2.co.uk/sites/default/files/sony-xperia-5-iii-sku-header-080921.png",
+		"category": "mobile",
+		"qnt":"20"
+	},
+	{
+		"id": "mob_5",
+		"name": "Google Pixel 6 Pro",
+		"price": "109999",
+		"description": "Step into the future with the Google Pixel 6 Pro featuring a 6.7-inch LTPO OLED display, Google Tensor chip, and an advanced camera system with enhanced low-light capabilities. Redefine your photography and smartphone experience.",
+		"imageURL": "https://fscl01.fonpit.de/devices/68/2068.png",
+		"category": "mobile",
+		"qnt":"20"
+	},
+	{
+		"id": "mob_6",
+		"name": "Samsung Galaxy Z Fold 3",
+		"price": "149999",
+		"description": "Unfold new possibilities with the Samsung Galaxy Z Fold 3, a foldable smartphone with a 7.6-inch AMOLED display, S Pen support, and water resistance. Experience the versatility of a smartphone and tablet in one innovative device.",
+		"imageURL": "https://lh3.googleusercontent.com/aMvhO4U1dDKHLIP8Gbh4s0HzyZJaDLCpc5RNxQYSDgAU_GXNkHogMMv7hmts7PB8dvjtGNhtmgwYpAsvKWHYncvhzmM3AYszAwH-",
+		"category": "mobile",
+		"qnt":"20"
+	},
+	{
+		"id": "lap_4",
+		"name": "MacBook Air M2",
+		"price": "129999",
+		"description": "Embrace the power of the MacBook Air M2 with the latest Apple Silicon chip, a stunning 13.3-inch Retina display, and an ultra-thin design. Enjoy a seamless and efficient computing experience with macOS Monterey.",
+		"imageURL": "https://gadgetshieldz.com/cdn/shop/files/macbook-pro-14-m2-pro-2023-total-body-coverage-ultra-clear.webp?v=1700139296",
+		"category": "laptop",
+		"qnt":"20"
+	},
+	{
+		"id": "lap_5",
+		"name": "Acer Predator Helios 300",
+		"price": "94999",
+		"description": "Conquer the gaming battlefield with the Acer Predator Helios 300 featuring a 15.6-inch 144Hz display, Intel Core i7 processor, and NVIDIA GeForce RTX 3060 graphics. Elevate your gaming performance with PredatorSense control.",
+		"imageURL": "https://pemmzchannel.com/wp-content/uploads/2020/07/Acer-Nitro-7-AN715-52-Standard_03-800x570.png",
+		"category": "laptop",
+		"qnt":"20"
+	},
+	{
+		"id": "lap_6",
+		"name": "Microsoft Surface Laptop 4",
+		"price": "109999",
+		"description": "Experience productivity and elegance with the Microsoft Surface Laptop 4 featuring a 13.5-inch PixelSense touchscreen, Intel Core i5 processor, and Windows 11. Work, create, and collaborate with style and performance.",
+		"imageURL": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4OXzi?ver=3a58",
+		"category": "laptop",
+		"qnt":"20"
+	},
+	{
+		"id": "mob_7",
+		"name": "OnePlus 9 Pro",
+		"price": "74999",
+		"description": "Experience flagship performance with the OnePlus 9 Pro, featuring a 6.7-inch Fluid AMOLED display, Snapdragon 888 processor, and a Hasselblad quad-camera system. Capture stunning photos and enjoy smooth multitasking.",
+		"imageURL": "https://oasis.opstatics.com/content/dam/oasis/page/2021/9-series/spec-image/9/Wintermist_2080a_euna.png",
+		"category": "mobile",
+		"qnt":"20"
+	},
+	{
+		"id": "mob_8",
+		"name": "iPhone 13 Pro Max",
+		"price": "129999",
+		"description": "Upgrade to the iPhone 13 Pro Max with a 6.7-inch Super Retina XDR display, A15 Bionic chip, and Pro camera system with ProRAW and ProRes video. Take your mobile photography and videography to new heights.",
+		"imageURL": "https://pngimg.com/d/iphone_13_PNG22.png",
+		"category": "mobile",
+		"qnt":"20"
+	},
+	{
+		"id": "mob_9",
+		"name": "Samsung Galaxy S21 Ultra",
+		"price": "104999",
+		"description": "Unleash the power of the Samsung Galaxy S21 Ultra with a 108MP camera, 6.8-inch Dynamic AMOLED 2X display, and S Pen compatibility. Experience pro-grade photography and productivity in one device.",
+		"imageURL": "https://assets.stickpng.com/thumbs/6220b118912013c51947f9d7.png",
+		"category": "mobile",
+		"qnt":"20"
+	},
+	{
+		"id": "lap_7",
+		"name": "Lenovo Legion 7",
+		"price": "139999",
+		"description": "Dominate gaming with the Lenovo Legion 7, featuring a 16-inch QHD display, AMD Ryzen 9 processor, and NVIDIA GeForce RTX 3080 graphics. Immerse yourself in high-performance gaming and content creation.",
+		"imageURL": "https://p1-ofp.static.pub/fes/cms/2022/04/07/sh4pkhb89ak1bfwymi3p3i55pggki8792118.png",
+		"category": "laptop",
+		"qnt":"20"
+	},
+	{
+		"id": "lap_8",
+		"name": "HP Envy 14",
+		"price": "129999",
+		"description": "Experience the ultimate in computing with the HP Envy 14, a 13.3-inch 4K OLED convertible laptop. Powered by Intel Core i7, this premium laptop seamlessly blends style and versatility for both work and entertainment.",
+		"imageURL": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07963707.png",
+		"category": "laptop",
+		"qnt": "In stock"
+	},
+	
+	{
+		"id": "lap_9",
+		"name": "Dell XPS 13",
+		"price": "94999",
+		"description": "Discover the compact and powerful Dell XPS 13 with a 13.4-inch InfinityEdge display, Intel Core i5 processor, and virtually borderless design. Perfect for on-the-go productivity and entertainment.",
+		"imageURL": "https://www.pngkey.com/png/full/252-2528420_worlds-smallest-13-inch-laptop-dell-xps-13.png",
+		"category": "laptop",
+		"qnt":"20"
+	},
+	
+		{
+		  "id": "tab_1",
+		  "name": "Apple iPad Pro",
+		  "price": "799",
+		  "description": "Experience the power of the Apple iPad Pro with its stunning Liquid Retina display, powerful A14 Bionic chip, and versatile features. Perfect for work or play.",
+		  "imageURL": "https://www.firstnet.com/content/dam/firstnet/images/tablets-and-laptops/firstnet-apple-ipad-pro-11-in-2022.png",
+		  "category": "tablet",
+		  "qnt": ""
+		},
+		{
+		  "id": "tab_2",
+		  "name": "Samsung Galaxy Tab S7+",
+		  "price": "849",
+		  "description": "Immerse yourself in entertainment with the Samsung Galaxy Tab S7+, featuring a Super AMOLED display, S Pen support, and powerful performance for productivity.",
+		  "imageURL": "https://www.bechtle.com/dam/jcr:eb151cf6-18f5-4586-ac7c-b756e99ad32b/tab-s7-black.png",
+		  "category": "tablet",
+		  "qnt": ""
+		},
+		{
+		  "id": "tab_3",
+		  "name": "Microsoft Surface Pro 7",
+		  "price": "799",
+		  "description": "Achieve more with the Microsoft Surface Pro 7. This versatile 2-in-1 tablet/laptop features a high-resolution PixelSense display and runs on powerful Intel processors.",
+		  "imageURL": "https://assets.stickpng.com/thumbs/588526af6f293bbfae451a38.png",
+		  "category": "tablet",
+		  "qnt": ""
+		},
+		{
+		  "id": "tab_4",
+		  "name": "Lenovo Tab P11 Pro",
+		  "price": "499",
+		  "description": "Enjoy premium entertainment with the Lenovo Tab P11 Pro. It boasts a vivid 2K display, powerful processors, and a sleek design for on-the-go productivity.",
+		  "imageURL": "https://p2-ofp.static.pub/fes/cms/2022/08/01/ycumf4z4oia108az0pq0kzvf17wdws486228.png",
+		  "category": "tablet",
+		  "qnt": ""
+		},
+		{
+		  "id": "tab_5",
+		  "name": "Amazon Fire HD 10",
+		  "price": "149",
+		  "description": "Get value and entertainment with the Amazon Fire HD 10. With a 10.1-inch Full HD display, hands-free Alexa, and a wide range of apps, it's perfect for all your needs.",
+		  "imageURL": "https://assets.stickpng.com/images/58f36d65a4fa116215a923f8.png",
+		  "category": "tablet",
+		  "qnt": ""
+		},
+		{
+		  "id": "tab_6",
+		  "name": "Huawei MatePad Pro",
+		  "price": "599",
+		  "description": "Experience the Huawei MatePad Pro with its immersive 2K display, powerful Kirin processor, and M-Pencil support. A sleek and stylish tablet for productivity and creativity.",
+		  "imageURL": "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/tablets/matepad-pro-11/img/module1/huawei-matepad-pro-11-kv.png",
+		  "category": "tablet",
+		  "qnt": ""
+		},
+		{
+		  "id": "tab_7",
+		  "name": "Google Pixel Slate",
+		  "price": "699",
+		  "description": "Unleash your creativity with the Google Pixel Slate. Featuring a Molecular Display and Pixelbook Pen support, it's perfect for work, play, and everything in between.",
+		  "imageURL": "https://cdn.chromebookdb.com/wp-content/uploads/google_pixel_slate.png",
+		  "category": "tablet",
+		  "qnt": ""
+		},
+		{
+		  "id": "tab_8",
+		  "name": "Sony Xperia Tablet Z4",
+		  "price": "649",
+		  "description": "Immerse yourself in entertainment with the Sony Xperia Tablet Z4. It boasts a 2K display, premium audio, and a slim design for a delightful multimedia experience.",
+		  "imageURL": "https://fscl01.fonpit.de/devices/06/206.png",
+		  "category": "tablet",
+		  "qnt": ""
+		},
+		{
+		  "id": "tab_9",
+		  "name": "Asus ZenPad 3S 10",
+		  "price": "299",
+		  "description": "Enjoy a premium tablet experience with the Asus ZenPad 3S 10. Featuring a stunning 9.7-inch display, powerful audio, and a sleek design for on-the-go productivity.",
+		  "imageURL": "https://theme546-electronics-wholesale.myshopify.com/cdn/shop/products/asus_9.7_zenpad_3s_10_64gb_tablet__wifi_titanium_gray__5_470x509_crop_top.png?v=1545665902",
+		  "category": "tablet",
+		  "qnt": ""
+		},	
+
+		{
+			"id": "sw_1",
+			"name": "Apple Watch Series 7",
+			"price": "399",
+			"description": "Stay connected and in style with the Apple Watch Series 7. Featuring a larger and more durable display, faster charging, and advanced health tracking capabilities.",
+			"imageURL": "https://www.aptronixindia.com/media/catalog/product/cache/31f0162e6f7d821d2237f39577122a8a/g/o/gold_3.png",
+			"category": "smartwatch",
+			"qnt": ""
+		  },
+		  {
+			"id": "sw_2",
+			"name": "Samsung Galaxy Watch 4",
+			"price": "249",
+			"description": "Elevate your fitness and health tracking with the Samsung Galaxy Watch 4. With advanced sensors and a sleek design, it's your perfect companion for an active lifestyle.",
+			"imageURL": "https://images.samsung.com/sa_en/galaxy-watch4-classic/feature/galaxy-watch4-classic-silver-better-sleep.png",
+			"category": "smartwatch",
+			"qnt": ""
+		  },
+		  {
+			"id": "sw_3",
+			"name": "Fitbit Sense",
+			"price": "299",
+			"description": "Achieve holistic wellness with the Fitbit Sense. This smartwatch offers stress management tools, EDA sensors, and advanced heart health tracking for a healthier lifestyle.",
+			"imageURL": "https://www.tmt.my/data/editor/sc-product/153/Fitbit-Sense.png",
+			"category": "smartwatch",
+			"qnt": ""
+		  },
+		  {
+			"id": "sw_4",
+			"name": "Garmin Venu 2",
+			"price": "399",
+			"description": "Enhance your active lifestyle with the Garmin Venu 2. Featuring a vibrant AMOLED display, GPS tracking, and advanced health metrics, it's your ideal fitness companion.",
+			"imageURL": "https://www.danielgerard.fr/wp-content/uploads/2022/01/Venu2Plus_HR_9000.png",
+			"category": "smartwatch",
+			"qnt": ""
+		  },
+		  {
+			"id": "sw_5",
+			"name": "Huawei Watch GT 3",
+			"price": "229",
+			"description": "Experience elegance and performance with the Huawei Watch GT 3. Boasting a stunning AMOLED display, long battery life, and comprehensive health tracking features.",
+			"imageURL": "https://ennap.com/cdn/shop/files/800_800_2677ADE3B967D6F4E69CFEF4032CD06E.png?v=1698776962",
+			"category": "smartwatch",
+			"qnt": ""
+		  },
+		  {
+			"id": "sw_6",
+			"name": "Amazfit GTR 3",
+			"price": "199",
+			"description": "Achieve fitness goals in style with the Amazfit GTR 3. Featuring a sleek design, AMOLED display, and advanced fitness tracking, it's perfect for active individuals.",
+			"imageURL": "https://uk.amazfit.com/cdn/shop/products/Madrid-04_480x480.png?v=1672394480",
+			"category": "smartwatch",
+			"qnt": ""
+		  },
+		  {
+			"id": "sw_7",
+			"name": "Fossil Gen 6",
+			"price": "299",
+			"description": "Combine style and smart features with the Fossil Gen 6. This stylish smartwatch offers a range of features including heart rate tracking, GPS, and customizable watch faces.",
+			"imageURL": "https://www.fossil.com/on/demandware.static/-/Library-Sites-FossilSharedLibrary/default/dwa9ed6e85/images/parallax-test/0105_Homepage_Hero1_watch2_Mobile.png",
+			"category": "smartwatch",
+			"qnt": ""
+		  },
+		  {
+			"id": "sw_8",
+			"name": "TicWatch Pro 3",
+			"price": "299",
+			"description": "Experience performance and efficiency with the TicWatch Pro 3. Featuring dual display technology, long battery life, and advanced health and fitness tracking.",
+			"imageURL": "https://d1yt8qkhp8oydd.cloudfront.net/images/img_4784628784481288299.png",
+			"category": "smartwatch",
+			"qnt": ""
+		  },
+		  {
+			"id": "sw_9",
+			"name": "Xiaomi Mi Watch",
+			"price": "129",
+			"description": "Stay connected and active with the Xiaomi Mi Watch. This budget-friendly smartwatch offers essential features like heart rate monitoring, sleep tracking, and more.",
+			"imageURL": "https://i01.appmifile.com/webfile/globalimg/products/m/mi-watch/specs-header.png",
+			"category": "smartwatch",
+			"qnt": ""
+		  }		
+	]

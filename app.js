@@ -1,33 +1,48 @@
 let CART = "";
 let PATH = '/data/products.json';
 
-// check for current user
+
+
+
+
+
+//^
 function getUser() {
-	if(sessionStorage.getItem('isAuthenticated')) {
-		// display basket count
+	if (sessionStorage.getItem('isAuthenticated')) {
+
 		let count = 0;
 		let currUserId = sessionStorage.getItem('currUserId');
 		let currentUserCartKey = 'cart_' + currUserId;
+		let user_role = sessionStorage.getItem('currUserRole')
 		count = JSON.parse(localStorage.getItem(currentUserCartKey || "[]")).length;
 		document.getElementById('basket').innerHTML = count;
 		document.getElementById('loginButton').style.display = 'none';
 		document.getElementById('cartName').innerHTML = sessionStorage.getItem('currUserName') + '\'s Cart';
+		document.getElementById('orders').style.display = 'block';
+		if (user_role === 'admin') {
+			let orders = document.getElementById('orders')
+			orders.setAttribute('href', '/admin/admin.html')
+			$('#adProd').show();
+			$('#adProd a').attr('href', '../admin/adminproducts.html')
+
+		}
 
 	} else {
 		document.getElementById('cartName').innerHTML = "Cart";
 		document.getElementById('logoutButton').style.display = 'none';
 		document.getElementById('basket-container').style.display = 'none';
+		document.getElementById('orders').style.display = 'none';
 		loadJSON(PATH);
 	};
-	// getting all products on the main page.
+
 	getAll();
 }
 
-// Fetch data from products.json and store to local storage
+
 function loadJSON(PATH) {
 	var xhr = new XMLHttpRequest();
 	xhr.onreadystatechange = () => {
-		if(xhr.readyState === XMLHttpRequest.DONE) {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
 			if (xhr.status === 200) {
 				let data = JSON.parse(xhr.responseText);
 				localStorage.setItem('products', JSON.stringify(data));
@@ -42,7 +57,7 @@ function loadJSON(PATH) {
 
 // Fetch Cart page
 function getCart() {
-	if(sessionStorage.getItem('isAuthenticated')) {
+	if (sessionStorage.getItem('isAuthenticated')) {
 		window.location = '/cart/cart.html'
 	} else {
 		alert("You must login to use cart");
@@ -50,7 +65,7 @@ function getCart() {
 	}
 }
 
-// Adding removing active class funtionality to categories
+
 function getAll() {
 	renderProducts();
 	document.getElementById('cat-mob').classList.remove('active');
@@ -58,30 +73,45 @@ function getAll() {
 	document.getElementById('cat-all').classList.add('active');
 }
 
-function getMobiles() {
-	renderProducts('mobile');
-	document.getElementById('cat-all').classList.remove('active');
-	document.getElementById('cat-lap').classList.remove('active');
-	document.getElementById('cat-mob').classList.add('active');
+
+
+
+function getCategories() {
+	let data = JSON.parse(localStorage.getItem('products'));
+	let categories = new Set();
+	data.forEach(item => {
+		categories.add(item.category);
+	});
+	return categories;
 }
 
+console.log(getCategories());
 
-function getLaptops() {
-	renderProducts('laptop');
-	document.getElementById('cat-all').classList.remove('active');
-	document.getElementById('cat-mob').classList.remove('active');
-	document.getElementById('cat-lap').classList.add('active');
+
+//render the categories in the cat-nav bar
+function renderCategories() {
+	let categories = getCategories();
+	let catBar = document.getElementById('catsbar');
+	
+	catBar.innerHTML += `<li id="cat-all" class="nav-item active"><a onclick="getAll()">All</a></li>`;
+	categories.forEach(cat => {
+		catBar.innerHTML += `<li id="cat-${cat}" class="nav-item"><a onclick="renderProducts('${cat}')">${cat}</a></li>`;
+	});
 }
 
+renderCategories();
 
-// render products based on given categories
+
+
+
 function renderProducts(cat) {
 	let productContainer = document.getElementById('product-container');
 	productContainer.innerHTML = "";
 	let data = JSON.parse(localStorage.getItem('products'));
+
 	data.forEach(item => {
-		if(cat) {
-			if(item.category === cat) {
+		if (cat) {
+			if (item.category === cat) {
 				productContainer.innerHTML += `
 					<div class="product-item">
 						<div class="prod-image">
@@ -89,9 +119,10 @@ function renderProducts(cat) {
 						</div>
 						<div class="prod-data" >
 							<span id="prod-title">${item.name}</span>
-							<span id="prod-price">₹ ${item.price}</span>
+							<span id="prod-price">$ ${item.price}</span>
 							<p id="prod-description">${item.description}</p>
-							<form action="javascript:addToCart('${item.id}')" class="cart-btn">
+							<p id="prod-qnt">Quantity(${item.qnt})</p>
+							<form action="javascript:addToCart('${item.id}, ${item.price}')" class="cart-btn">
 								<button class="btn" id="add-to-cart" type="submit">Add to cart</button>
 							</form>
 						</div>
@@ -107,9 +138,10 @@ function renderProducts(cat) {
 						</div>
 						<div class="prod-data" >
 							<span id="prod-title">${item.name}</span>
-							<span id="prod-price">₹ ${item.price}</span>
+							<span id="prod-price">$ ${item.price}</span>
 							<p id="prod-description">${item.description}</p>
-							<form action="javascript:addToCart('${item.id}')" class="cart-btn">
+							<p id="prod-qnt"><em style='color:red'>Quantity(${item.qnt})</em></p>
+							<form action="javascript:addToCart('${item.id}', '${item.price}')" class="cart-btn">
 								<button class="btn" id="add-to-cart" type="submit">Add to cart</button>
 							</form>
 						</div>
@@ -120,22 +152,22 @@ function renderProducts(cat) {
 	});
 
 }
-
+//^
 // Add the item with the product id to the current user's cart
-function addToCart(prodId) {
-	if(sessionStorage.getItem('isAuthenticated')) {
+function addToCart(prodId, price) {
+	if (sessionStorage.getItem('isAuthenticated')) {
 		let currUserId = sessionStorage.getItem('currUserId');
 		let currentUserCartKey = 'cart_' + currUserId;
 		CART = JSON.parse(localStorage.getItem(currentUserCartKey || "[]"));
 		let isAlreadyInCart = CART.some(item => item.id === prodId);
-		if(isAlreadyInCart) {
+		if (isAlreadyInCart) {
 			CART.forEach(item => {
-				if(item.id === prodId) {
+				if (item.id === prodId) {
 					item.count++;
 				}
 			})
 		} else {
-			CART.push({"id":prodId,"count":1});
+			CART.push({ "id": prodId, "count": 1, "price": price });
 		}
 		localStorage.setItem(currentUserCartKey, JSON.stringify(CART));
 		window.alert("Succesfully Added");
@@ -145,10 +177,34 @@ function addToCart(prodId) {
 	}
 }
 
-// Logout current user
 function logout() {
 	sessionStorage.clear();
 	window.location = '../index.html'
 }
+
+
+
+
+function getUorders() {
+	if (sessionStorage.getItem('isAuthenticated')) {
+		window.location = '/uorders/uorders.html'
+	} else {
+		alert("You must login to use cart");
+		window.location = '/auth/login.html';
+	}
+}
+
+createOrdersTable()
+
+function createOrdersTable() {
+	if (!localStorage.getItem('orders')) {
+		localStorage.setItem('orders', JSON.stringify([]));
+	}
+}
+
+// function goToadprod() {
+// 	window.location = '/admin/adminproducts.html'
+// }
+
 
 

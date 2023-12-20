@@ -1,6 +1,6 @@
 
 function renderCart() {
-	console.log("cart-called");
+	
 	let cartContainer = document.getElementById('cart-container');
 	cartContainer.innerHTML = "";
 	let data = JSON.parse(localStorage.getItem('products'));
@@ -15,6 +15,8 @@ function renderCart() {
 				}
 			}
 		});
+
+		//console.log(cartArr);
 		cartArr.forEach( (item, index) => {
 			cartContainer.innerHTML += `
 			<div class="cart-product-item">
@@ -23,7 +25,7 @@ function renderCart() {
 			</div>
 			<div class="cart-prod-data" >
 				<span id="cart-prod-title">${item.name}</span>
-				<span id="cart-prod-price">₹ ${item.price}</span>
+				<span id="cart-prod-price">$ ${item.price}</span>
 				<span class="edit-quant"><button class="edit-count-btn" onClick="removeByOne('${index}')"><i class="material-icons">remove</i></button><input type="text" name="quantity" id="quantity" class="quant-input" value="${item.quantity}" readonly><button class="edit-count-btn" onClick="addByOne('${index}')"><i class="material-icons">add</i></button></span>
 			</div>
 			<form action="javascript:removeFromCart('${index}')" class="remove-cart-btn">
@@ -45,7 +47,7 @@ function removeByOne(index) {
 	let currUserId = sessionStorage.getItem('currUserId');
 	let currentUserCartKey = 'cart_' + currUserId;
 	let cart = JSON.parse(localStorage.getItem(currentUserCartKey || "[]"));
-	console.log(cart[+index]);
+	
 	if(cart[+index].count === 1) {
 		cart.splice(index, 1);
 	} else {
